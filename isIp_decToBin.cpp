@@ -8,14 +8,13 @@ bool itc_isIp(string str){
             nov += str[i];
         }
         else if(str[i] == '.'){
-            if(itc_len(nov) > 3){
+            if(itc_len(nov) > 3)
                 return false;
             else if((itc_ToInt(nov) > 255) || (itc_ToInt(nov) < 0)){
                 return false;
             }
             nov = "";
             point++;
-        }
     }
     if(point != 3){
         return false;
