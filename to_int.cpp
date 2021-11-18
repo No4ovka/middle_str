@@ -9,8 +9,10 @@ string itc_ToString(int num){
         point = num % 10;
         res += '0' + point;
         num = num / 10;
-    for(int i = itc_len(res) - 1; i >= 0; i--)
+    }
+    for(int i = itc_len(res) - 1; i >= 0; i--){
         result += res[i];
+    }
     return result;
 }
 long long itc_ToInt(string str){
