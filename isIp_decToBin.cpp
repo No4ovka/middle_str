@@ -15,10 +15,10 @@ bool itc_isIp(string str){
             }
             nov = "";
             point++;
+        }
     }
-    if(point != 3){
+    if(point != 3)
         return false;
-    }
     return true;
 }
 string itc_DecToBin(string str){
