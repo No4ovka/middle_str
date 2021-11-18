@@ -3,7 +3,6 @@
 bool itc_isIp(string str){
     long long len = itc_len(str), point = 0;
     string nov;
-    long long len1 = itc_len(nov);
     for(int i = 0; i < len; i++){
         if(str[i] != '.'){
             nov += str[i];
