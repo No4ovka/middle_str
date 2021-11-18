@@ -47,6 +47,8 @@ string itc_maxCharWord(string str){
                 str1 = str2;
             }
     }
+    if (a == 0)
+        return "error";
     if (verno == true)
         return str1;
     return "error";

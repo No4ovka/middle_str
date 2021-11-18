@@ -39,7 +39,11 @@ string itc_rmFreeSpace(string str){
             str1 += str[k];
     }
     int len2 = itc_len(str1);
-    if(str1[len2 - 1] == ' ')
+    if(str1[len2 - 1] == ' ' && str1[0] == ' ')
+        return itc_slice_str(str1, 1, itc_len(str1) - 2);
+    else if (str1[len2 - 1] == ' ')
         return itc_slice_str(str1, 0, itc_len(str1) - 2);
+    else if (str1[0] == ' ')
+        return itc_slice_str(str1, 1, itc_len(str1) - 1);
     return str1;
 }
