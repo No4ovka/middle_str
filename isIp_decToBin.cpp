@@ -1,20 +1,24 @@
 #include "middle_str.h"
 
 bool itc_isIp(string str){
-    long long len = itc_len(str), point = 0;
+    long long point = 0;
     string nov;
-    for(int i = 0; i < len; i++){
-        if(str[i] != '.'){
-            nov += str[i];
+    for(int i = 0; i < itc_len(str)+1; i++){
+        if(str[i] != '.' && (str[i] != '\0')){
+            if (char(str[i]) > 47 && char(str[i]) < 58)
+                nov += str[i];
+            else
+                return false;
         }
-        else if(str[i] == '.'){
+        else if((str[i] == '.') || (str[i] == '\0')){
+            if (str[i] == '.')
+                point++;
             if(itc_len(nov) > 3)
                 return false;
             else if((itc_ToInt(nov) > 255) || (itc_ToInt(nov) < 0)){
                 return false;
             }
             nov = "";
-            point++;
         }
     }
     if(point != 3)

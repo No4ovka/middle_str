@@ -16,6 +16,8 @@ char itc_sameChar(string str){
 bool itc_isFirstInSecond(string s1, string s2){
     bool a;
     string st1,st2;
+    if (itc_len(s1) == 0)
+        return true;
     for (int k = 0; k < itc_len(s2); k++){
         if (s1[0] == s2[k]){
             a = true;
@@ -24,7 +26,7 @@ bool itc_isFirstInSecond(string s1, string s2){
                     a = false;
             }
             if (a == true)
-                return a;
+                return true;
         }
     }
     return false;
