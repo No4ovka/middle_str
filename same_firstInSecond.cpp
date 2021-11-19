@@ -11,15 +11,7 @@ char itc_sameChar(string str){
             }
         }
 }
-char itc_sameChar(string str)
-{
-	long long len = itc_len(str);
-	for (int i = 0; i < len; i++) {
-		for (int j = 1; j < len; j++) {
-			if ((j != i) && (str[i] == str[j])) return str[i];
-		}
-	}
-}
+
 bool itc_isFirstInSecond(string s1, string s2){
     bool a;
     string st1,st2;
