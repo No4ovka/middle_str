@@ -7,7 +7,7 @@ char itc_sameChar(string str){
             if (k == i)
                  b = 0;
             else if (str[k] == str[i])
-                return str[k];
+                return (char(str[k]));
         }
     }
     if (b = -1)

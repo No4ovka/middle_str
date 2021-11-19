@@ -29,8 +29,8 @@ string itc_DecToBin(string str){
     long long num = 0, k = 0;
     string str1 = "";
     while  ( k < itc_len(str)){
-        if (char(str[k]) > 47 && char(str[k]) < 58){
-            while (char(str[k]) > 47 && char(str[k]) < 58){
+        if ((char(str[k]) > 47) && (char(str[k]) < 58)){
+            while ((char(str[k])) > 47 && (char(str[k]) < 58)){
                 num = num * 10 + (char(str[k]) - 48);
                 k++;
             }

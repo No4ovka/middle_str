@@ -3,7 +3,7 @@
 bool itc_compare(string s1, string s2){
     long long maxi;
     bool da;
-    if (itc_len(s1) > itc_len(s2))
+    if (itc_len(s1) >= itc_len(s2))
         maxi = itc_len(s1);
     else
         maxi = itc_len(s2);
@@ -15,6 +15,7 @@ bool itc_compare(string s1, string s2){
     }
     if (da == true)
         return true;
+    return false;
 }
 int itc_countWords(string str){
     int schet = 1;
