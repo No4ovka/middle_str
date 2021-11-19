@@ -6,8 +6,12 @@ char itc_sameChar(string str){
         for (int i = 0; i < a; i++){
             if (k == i)
                  b = 0;
-            else if (str[k] == str[i])
-                return (char(str[k]));
+            else{
+                if (str[k] == str[i])
+                    return str[k];
+                else
+                    b = 0;
+            }
         }
     }
     if (b = -1)
