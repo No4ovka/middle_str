@@ -13,12 +13,13 @@ bool itc_compare(string s1, string s2){
         else
             return false;
     }
-    return true;
+    if (da == true)
+        return true;
 }
 int itc_countWords(string str){
     int schet = 1;
     for (int k = 0; k < itc_len(str); k++){
-        if ((char(str[k]) > 64) && (char(str[k]) < 91) || (char(str[k]) > 96) && (char(str[k]) < 123) || (char(str[k]) == 32)){
+        if (((char(str[k]) > 64) && (char(str[k]) < 91)) || ((char(str[k]) > 96) && (char(str[k]) < 123)) || (char(str[k]) == 32)){
             if (char(str[k]) == 32){
                 schet++;
             }
@@ -37,7 +38,7 @@ string itc_maxCharWord(string str){
             b = 0;
             verno = true;
         }else {
-            if ((char(str[k]) > 64) && (char(str[k]) < 91) || (char(str[k]) > 96) && (char(str[k]) < 123)){
+            if (((char(str[k]) > 64) && (char(str[k]) < 91)) || ((char(str[k]) > 96) && (char(str[k]) < 123))){
                 b++;
                 str2 += str[k];
             }

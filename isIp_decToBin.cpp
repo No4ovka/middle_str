@@ -42,9 +42,7 @@ string itc_DecToBin(string str){
 }
 string itc_decToBase(int num, int base){
     string str = "", str1 = "";
-    int o;
     while (num != 0){
-        //obr=(obr * 10 +(num%2));
         if ((num % base) == 10)
             str += 'A';
         else if((num % base) == 11)

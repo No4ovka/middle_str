@@ -1,15 +1,17 @@
 #include "middle_str.h"
 
 char itc_sameChar(string str){
-    char a;
-    for (int k = 0; k < itc_len(str); k++){
-        for (int i = 0; i < itc_len(str); i++){
+    long long a = itc_len(str), b = 0;;
+    for (int k = 0; k < a; k++){
+        for (int i = 0; i < a; i++){
             if (k == i)
-                int b=0;
+                 b = 0;
             else if (str[k] == str[i])
                 return str[k];
         }
     }
+    if (b = -1)
+        return '0';
 }
 bool itc_isFirstInSecond(string s1, string s2){
     bool a;
