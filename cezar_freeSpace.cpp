@@ -2,6 +2,8 @@
 
 string itc_Cezar(string str, int k){
     string cez = "";
+    if (str == "")
+        return "";
     for (int i = 0; i < itc_len(str); i++){
         char a = char(str[i]);
         if ((a > 64) && (a < 91)){

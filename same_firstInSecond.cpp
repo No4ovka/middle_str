@@ -1,7 +1,9 @@
 #include "middle_str.h"
 
 char itc_sameChar(string str){
-    long long a = itc_len(str), b = 0;;
+    long long a = itc_len(str), b = 0;
+    if (str == "")
+        return ' ';
     for (int k = 0; k < a; k++){
         for (int i = 0; i < a; i++){
             if ((k != i) &&(str[k] == str[i]))

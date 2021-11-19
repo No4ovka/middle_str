@@ -18,16 +18,21 @@ bool itc_compare(string s1, string s2){
     return false;
 }
 int itc_countWords(string str){
-    int schet = 1;
-    for (int k = 0; k < itc_len(str); k++){
-        if (((char(str[k]) > 64) && (char(str[k]) < 91)) || ((char(str[k]) > 96) && (char(str[k]) < 123)) || (char(str[k]) == 32)){
-            if (char(str[k]) == 32){
-                schet++;
-            }
-        }else
-            return 0;
+    long long schet = 0;
+    bool a = true;
+    if (str == "")
+        return 0;
+    for (long long k = 0; k < itc_len(str); k++){
+        if (((char(str[k]) < 65) || (char(str[k]) > 90)) && ((char(str[k]) < 97) || (char(str[k]) > 122)) && (char(str[k]) != 32))
+            a = false;
+        else if (char(str[k]) == 32 && a == true)
+            schet ++;
+        else if (str[k] == 32 && a == false)
+            a = true;
     }
-    return schet;
+    if (a == false)
+        return schet;
+    return schet + 1;
 }
 string itc_maxCharWord(string str){
     string str1, str2;
