@@ -22,9 +22,9 @@ bool itc_isIp(string str){
     return true;
 }
 string itc_DecToBin(string str){
-    int num = 0, k = 0;
+    long long num = 0, k = 0;
     string str1 = "";
-    while  ( k<itc_len(str)){
+    while  ( k < itc_len(str)){
         if (char(str[k]) > 47 && char(str[k]) < 58){
             while (char(str[k]) > 47 && char(str[k]) < 58){
                 num = num * 10 + (char(str[k]) - 48);
