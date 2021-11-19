@@ -2,14 +2,13 @@
 
 char itc_sameChar(string str){
     long long a = itc_len(str);
-    if (str == "")
-        return ' ';
+//    if (str == "")
+//        return ' ';
     for (int k = 0; k < a; k++){
         for (int i = 0; i < a; i++){
-            if ((k != i) &&(str[k] == str[i]))
-                return str[k];
-            }
+            if ((k != i) &&(str[k] == str[i])) return str[k];
         }
+    }
 }
 
 bool itc_isFirstInSecond(string s1, string s2){
