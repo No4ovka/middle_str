@@ -2,11 +2,9 @@
 
 char itc_sameChar(string str)
 {
-    long long a = itc_len(str);
-//    if (str == "")
-//        return ' ';
-    for (int k = 0; k < a; k++){
-        for (int i = 0; i < a; i++){
+    long long len = itc_len(str);
+    for (int k = 0; k < len; k++){
+        for (int i = 0; i < len; i++){
             if ((k != i) &&(str[k] == str[i])) return str[k];
         }
     }
