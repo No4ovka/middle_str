@@ -1,6 +1,7 @@
 #include "middle_str.h"
 
-char itc_sameChar(string str){
+char itc_sameChar(string str)
+{
     long long a = itc_len(str);
 //    if (str == "")
 //        return ' ';
