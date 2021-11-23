@@ -9,6 +9,7 @@ char itc_sameChar(string str)
                 return str[i];
         }
     }
+    return 0;
 }
 
 bool itc_isFirstInSecond(string s1, string s2){
