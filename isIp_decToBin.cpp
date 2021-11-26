@@ -28,6 +28,8 @@ bool itc_isIp(string str){
 string itc_DecToBin(string str){
     long long num = 0, k = 0;
     string str1 = "";
+    if (str == "0")
+         return "0";
     while  ( k < itc_len(str)){
         if ((char(str[k]) > 47) && (char(str[k]) < 58)){
             while ((char(str[k])) > 47 && (char(str[k]) < 58)){
